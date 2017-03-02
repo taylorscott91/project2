@@ -1,0 +1,913 @@
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+Started GET "/" for ::1 at 2017-03-02 00:00:15 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  Rendered groups/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 469ms (Views: 409.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:00:31 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  Rendered groups/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:00:44 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  Rendered groups/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:15:54 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (7.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_artist_path' for #<#<Class:0x007fd4964ee9c8>:0x007fd49652ecd0>):
+    1: <h2>Artists <%= link_to "(+)", new_artist_path %></h2>
+    2: 
+    3: <ul>
+    4:   <% @artists.each do |artist| %>
+  
+app/views/groups/index.html.erb:1:in `_app_views_groups_index_html_erb___3893261454017147126_70275515775780'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.5ms)
+Started GET "/" for ::1 at 2017-03-02 00:16:42 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "groups" does not exist
+LINE 1: SELECT "groups".* FROM "groups"
+                               ^
+: SELECT "groups".* FROM "groups"):
+    1: <h2>Groups <%= link_to "(+)", new_group_path %></h2>
+    2: 
+    3: <ul>
+    4:   <% @groups.each do |group| %>
+    5:     <li>
+    6:       <%= link_to group.name, group %>
+    7:     </li>
+  
+app/views/groups/index.html.erb:4:in `_app_views_groups_index_html_erb___3893261454017147126_70275513664480'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5494999985580325185);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGroups (20170302051917)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "name" character varying)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170302051917"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGames (20170302051926)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.3ms)[0m  [1m[35mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "group_id" integer)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170302051926"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-02 05:20:37 UTC], ["updated_at", 2017-03-02 05:20:37 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5494999985580325185)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Board Games"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Card Games"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Video Games - PS4"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Destiny"], ["group_id", 3]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Betrayal at House on the Hill"], ["group_id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Takenoko"], ["group_id", 1]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Fluxx"], ["group_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2017-03-02 00:20:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 276ms (Views: 254.6ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:20:58 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (46.6ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 11.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Game id: 2, name: "Betrayal at House on the Hill", group_id: 1>):
+     7: <ul>
+     8:   <% @group.games.each do |game| %>
+     9:     <li>
+    10:       <%= link_to "#{game.title}", group_game_path(@group, game) %>
+    11:     </li>
+    12:   <% end %>
+    13: </ul>
+  
+app/views/groups/show.html.erb:10:in `block in _app_views_groups_show_html_erb___4206700216220905341_70314167710920'
+app/views/groups/show.html.erb:8:in `_app_views_groups_show_html_erb___4206700216220905341_70314167710920'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.8ms)
+Started GET "/" for ::1 at 2017-03-02 00:21:01 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (2.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 00:21:03 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Game id: 1, name: "Destiny", group_id: 3>):
+     7: <ul>
+     8:   <% @group.games.each do |game| %>
+     9:     <li>
+    10:       <%= link_to "#{game.title}", group_game_path(@group, game) %>
+    11:     </li>
+    12:   <% end %>
+    13: </ul>
+  
+app/views/groups/show.html.erb:10:in `block in _app_views_groups_show_html_erb___4206700216220905341_70314188889460'
+app/views/groups/show.html.erb:8:in `_app_views_groups_show_html_erb___4206700216220905341_70314188889460'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.6ms)
+Started GET "/" for ::1 at 2017-03-02 00:21:11 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/groups/new" for ::1 at 2017-03-02 00:21:22 -0500
+Processing by GroupsController#new as HTML
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 59ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/groups" for ::1 at 2017-03-02 00:21:37 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/cCEJgQJWJ0JV/hvtqV59U1ZKQVesUF3x3uEHYFqvrBMF0lqA505dy+U2LyHUAgb6diM2uI66PBZ1YtidSNFHA==", "group"=>{"name"=>"Wishlist"}, "commit"=>"Create Group"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Wishlist"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/groups/4
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/groups/4" for ::1 at 2017-03-02 00:21:37 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:21:42 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:23:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 276ms (Views: 256.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:23:09 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 83ms (Views: 46.7ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:23:24 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"games", :group_id=>"1", :id=>nil} missing required keys: [:id]):
+     7: <ul>
+     8:   <% @group.games.each do |game| %>
+     9:     <li>
+    10:       <%= group_game_path(@group, @game) %>
+    11:     </li>
+    12:   <% end %>
+    13: </ul>
+  
+app/views/groups/show.html.erb:10:in `block in _app_views_groups_show_html_erb___778854316597799853_70110838909820'
+app/views/groups/show.html.erb:8:in `_app_views_groups_show_html_erb___778854316597799853_70110838909820'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.0ms)
+Started GET "/groups/1" for ::1 at 2017-03-02 00:23:28 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/1/edit" for ::1 at 2017-03-02 00:53:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/edit.html.erb within layouts/application
+  Rendered groups/edit.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 285ms (Views: 257.5ms | ActiveRecord: 5.8ms)
+
+
+Started PATCH "/groups/1" for ::1 at 2017-03-02 00:53:22 -0500
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r2lsTnkDreyGeuPSCSlXuM4vrfkOu0VMFKqnHFwkLAMJWRd1+oXJ59m5v6g8ZtrgT3vbW4gqP1U4x0MKQmcOcA==", "group"=>{"name"=>"Board Games"}, "commit"=>"Update Group", "id"=>"1"}
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/groups/1
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:53:22 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 49ms (Views: 38.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:53:59 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:54:09 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:54:34 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 00:54:43 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:54:45 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/2" for ::1 at 2017-03-02 00:54:50 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 2]]
+  Rendered groups/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 00:54:53 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:55:01 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 00:55:02 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"games", :group_id=>"3", :id=>nil} missing required keys: [:id]):
+     7: <ul>
+     8:   <% @group.games.each do |game| %>
+     9:     <li>
+    10:       <%= group_game_path(@group, @game) %>
+    11:     </li>
+    12:   <% end %>
+    13: </ul>
+  
+app/views/groups/show.html.erb:10:in `block in _app_views_groups_show_html_erb__3431112104733485962_70098546560040'
+app/views/groups/show.html.erb:8:in `_app_views_groups_show_html_erb__3431112104733485962_70098546560040'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.5ms)
+Started GET "/" for ::1 at 2017-03-02 00:55:04 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 70ms (Views: 64.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 00:55:12 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 00:55:14 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `game' for #<Group id: 3, name: "Video Games - PS4">):
+     7: <ul>
+     8:   <% @group.games.each do |game| %>
+     9:     <li>
+    10:       <%= group_game_path(@group, @group.game) %>
+    11:     </li>
+    12:   <% end %>
+    13: </ul>
+  
+app/views/groups/show.html.erb:10:in `block in _app_views_groups_show_html_erb__3431112104733485962_70098545901860'
+app/views/groups/show.html.erb:8:in `_app_views_groups_show_html_erb__3431112104733485962_70098545901860'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.7ms)
+Started GET "/groups/3" for ::1 at 2017-03-02 00:55:52 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 00:56:24 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  Rendered groups/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/TaylorScott/wdi/projects/02/project2/gameapp/app/views/groups/show.html.erb:10: syntax error, unexpected ')', expecting '='
+...uffer.append=( (@group, game) );@output_buffer.safe_append='
+...                               ^
+/Users/TaylorScott/wdi/projects/02/project2/gameapp/app/views/groups/show.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/TaylorScott/wdi/projects/02/project2/gameapp/app/views/groups/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/TaylorScott/wdi/projects/02/project2/gameapp/app/views/groups/show.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/groups/show.html.erb:10: syntax error, unexpected ')', expecting '='
+app/views/groups/show.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+app/views/groups/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/groups/show.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.7ms)
+Started GET "/groups/3" for ::1 at 2017-03-02 00:56:30 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 00:56:34 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  Rendered groups/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/TaylorScott/wdi/projects/02/project2/gameapp/app/views/groups/show.html.erb:10: syntax error, unexpected ',', expecting ')'
+...pend=( group_game_path (@group, game) );@output_buffer.safe_...
+...                               ^):
+  
+app/views/groups/show.html.erb:10: syntax error, unexpected ',', expecting ')'
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/TaylorScott/.rvm/gems/ruby-2.2.6/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.4ms)
+Started GET "/groups/3" for ::1 at 2017-03-02 00:56:38 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 08:46:55 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 121ms (Views: 95.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:33:40 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:33:41 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:34:00 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:38:19 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:42:30 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups/3" for ::1 at 2017-03-02 09:42:38 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 3]]
+  Rendered groups/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 56ms (Views: 47.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:43:02 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:43:16 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:43:34 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 09:43:49 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 53ms (Views: 47.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:44:09 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:44:30 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:44:56 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:45:47 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:46:08 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:48:58 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:07 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:14 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:30 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:36 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:46 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:54 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:49:56 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:50:02 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:50:12 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:50:28 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:51:03 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:52:49 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:53:23 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:53:34 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:53:47 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:53:57 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:54:08 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 09:54:55 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (133.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gameapp_development"[0m
+  [1m[35m (122.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "gameapp_test"[0m
+  [1m[35m (324.3ms)[0m  [1m[35mCREATE DATABASE "gameapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (245.3ms)[0m  [1m[35mCREATE DATABASE "gameapp_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5494999985580325185);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGroups (20170302051917)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "name" character varying)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170302051917"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGames (20170302051926)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "games" ("id" serial primary key, "name" character varying, "group_id" integer)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170302051926"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-02 14:55:41 UTC], ["updated_at", 2017-03-02 14:55:41 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5494999985580325185)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Board Games"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Card Games"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Video Games - PS4"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Destiny"], ["group_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Betrayal at House on the Hill"], ["group_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Takenoko"], ["group_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "games" ("name", "group_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Fluxx"], ["group_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2017-03-02 09:55:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 329ms (Views: 297.5ms | ActiveRecord: 8.0ms)
+
+
