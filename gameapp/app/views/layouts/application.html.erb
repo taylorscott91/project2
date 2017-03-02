@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameCollectionApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header><img src="https://wallpaperbrowse.com/media/images/the-games-logo.jpg"></header>
+    <h1>Collect.   Trade.    Play.</h1>
+
+    <%= yield %>
+  </body>
+</html>

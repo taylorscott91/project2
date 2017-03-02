@@ -911,3 +911,20 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 329ms (Views: 297.5ms | ActiveRecord: 8.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-02 11:00:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (7.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 292ms (Views: 258.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:00:24 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
