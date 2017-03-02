@@ -1,0 +1,13 @@
+<h2><%= @group.name %> <%= link_to "(edit)", edit_group_path(@group) %></h2>
+
+
+
+<h3>Games <%= link_to "(+)", new_group_game_path(@group) %></h3>
+
+<ul>
+  <% @group.games.each do |game| %>
+    <li>
+      <%= group_game_path(@group, game) %>
+    </li>
+  <% end %>
+</ul>

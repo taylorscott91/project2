@@ -1,0 +1,9 @@
+<h2>Games <%= link_to "(+)", new_game_path %></h2>
+
+<ul>
+  <% @games.each do |game| %>
+    <li>
+      <%= link_to "#{game.title} - #{game.group.name}", game %>
+    </li>
+  <% end %>
+</ul>
