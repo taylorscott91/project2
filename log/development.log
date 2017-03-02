@@ -945,3 +945,130 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for ::1 at 2017-03-02 11:02:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 267ms (Views: 245.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:05:48 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:06:22 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:06:35 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:06:52 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:07:03 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:07:12 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:07:44 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:07:52 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:08:18 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 11:08:48 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (6.7ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 123ms (Views: 94.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 11:09:09 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:09:11 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 111ms (Views: 104.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 11:09:13 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2017-03-02 11:09:19 -0500
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."group_id" = $1[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 1.1ms)
+
+

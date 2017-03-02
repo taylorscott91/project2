@@ -15,13 +15,14 @@
  */
 body {
   background-color: black;
-  font-family: "Arial";
+  font-family: "Baloo";
 }
 
 h1 {
   text-align: center;
   color: #00F9FF;
   font-size: 6em;
+  word-spacing: 50px;
 }
 h2 {
   text-align: center;
@@ -48,4 +49,5 @@ li {
 a {
   color: #00F9FF;
   text-decoration: none;
+  text-align: center;
 }
