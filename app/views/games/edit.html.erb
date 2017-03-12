@@ -1,15 +1,15 @@
 <h2>Edit Game</h2>
 
-<%= form_for @game do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
+<%= form_for [@group, @game] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%# The attributes on a form_for must match those of the model it is creating / editing %>
   <%= f.label :group_id %>
   <%= f.text_field :group_id %>
 
   <%= f.submit %>
 <% end %>
 
-<%= form_for @game, method: :delete do |f| %>
+<%= form_for [@group, @game], method: :delete do |f| %>
   <%= f.submit "Delete!", class: "delete" %>
 <% end %>
