@@ -17,3 +17,13 @@ Game.create(name: "Destiny", group_id: 3)
 Game.create(name: "Betrayal at House on the Hill", group_id: 1)
 Game.create(name: "Takenoko", group_id: 1)
 Game.create(name: "Fluxx", group_id: 2)
+
+# Always use bang (!) operators on .create!() to force potential errors to print to the terminal
+# When creating mutliple instances of a given model, you can use an array syntax:
+#
+# Game.create!([
+#   {name: "Destiny", group_id: 3},
+#   {name: "Betrayal at House on the Hill", group_id: 1},
+#   {name: "Takenoko", group_id: 1},
+#   {name: "Fluxx", group_id: 2}
+# ])

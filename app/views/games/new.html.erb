@@ -1,11 +1,13 @@
 <h2>New Game</h2>
 
 <%= form_for [@group, @game] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%# The error on new was because :title should be :name to match the attribute on the schema %>
   <%= f.label :group_id %>
   <%= f.text_field :group_id %>
-
+  <%# You do not need a field for :group_id since you can do it in the controller's create action
+  by querying params for which group the game is being created in. Look in the controller for
+  an example of this %>
   <%= f.submit %>
 <% end %>

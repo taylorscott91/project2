@@ -7,7 +7,7 @@
 <ul>
   <% @group.games.each do |game| %>
     <li>
-      <%= group_game_path(@group, game) %>
+      <%= link_to game.name, group_game_path(@group, game) %>
     </li>
   <% end %>
 </ul>
